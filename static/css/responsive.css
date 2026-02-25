@@ -1,0 +1,98 @@
+/* ═══ HAMBURGER ═══ */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--sand);transition:all .3s;border-radius:2px}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:190;background:rgba(13,13,13,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mobile-menu.open{display:flex;animation:fadeUp .3s ease}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--sand);text-decoration:none;letter-spacing:.05em;transition:color .2s}
+.mobile-menu a:hover{color:var(--saffron)}
+.mobile-menu .btn-primary{font-family:'DM Sans',sans-serif;font-size:.88rem;margin-top:1rem}
+
+/* ═══ RESPONSIVE — LAPTOP (max 1100px) ═══ */
+@media(max-width:1100px){
+  nav{padding:1.4rem 2rem}
+  .features{padding:7rem 2.5rem}
+  .explore{padding:7rem 2.5rem}
+  .ml-section{padding:5rem 2.5rem}
+}
+
+/* ═══ RESPONSIVE — TABLET (max 900px) ═══ */
+@media(max-width:900px){
+  nav{padding:1.2rem 2rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero h1{font-size:clamp(2.8rem,7vw,4.5rem)}
+  .hero-sub{font-size:.9rem}
+  .planner{padding:6rem 1.5rem}
+  .planner-card{padding:1.8rem}
+  .form-row.three{grid-template-columns:1fr 1fr}
+  .features{padding:6rem 2rem}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .ml-section{padding:5rem 2rem}
+  .ml-card{padding:2rem}
+  .ml-form{grid-template-columns:1fr 1fr}
+  .conf-breakdown{grid-template-columns:repeat(2,1fr)}
+  .model-stats-bar{gap:1rem}
+  .explore{padding:6rem 2rem}
+  .states-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  footer{padding:2.5rem 2rem}
+  #results{padding:1.8rem}
+  .budget-breakdown{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ═══ RESPONSIVE — MOBILE (max 600px) ═══ */
+@media(max-width:600px){
+  .btn-nav{display:none}
+  nav{padding:1rem 1.2rem}
+  .logo{font-size:1.4rem}
+  .hero{padding:0 1.2rem}
+  .hero::after{width:320px;height:320px}
+  .hero h1{font-size:clamp(2.4rem,10vw,3.5rem)}
+  .hero-tag{font-size:.65rem;letter-spacing:.2em}
+  .hero-tag::before,.hero-tag::after{width:24px}
+  .hero-sub{font-size:.88rem;max-width:100%}
+  .btn-primary,.btn-ghost{padding:.75rem 1.6rem;font-size:.82rem}
+  .marquee-wrap{padding:2rem 0}
+  .marquee-item{font-size:1.1rem}
+  .planner{padding:5rem 1.2rem 4rem}
+  .planner h2,.sec-title{font-size:clamp(1.8rem,7vw,2.5rem);margin-bottom:2rem}
+  .planner-card{padding:1.3rem}
+  .form-row,.form-row.three{grid-template-columns:1fr;gap:1rem}
+  .form-group input,.form-group select{font-size:.85rem;padding:.7rem .9rem}
+  .btn-plan{font-size:.82rem;padding:.9rem}
+  #results{padding:1.3rem}
+  .result-header h3{font-size:1.5rem}
+  .budget-breakdown{grid-template-columns:1fr 1fr}
+  .budget-item .amount{font-size:1.1rem}
+  .budget-bar-label{width:68px;font-size:.65rem}
+  .hotels-grid{grid-template-columns:1fr}
+  .hotel-book-row{flex-direction:row}
+  .book-btn{font-size:.6rem;padding:.38rem .4rem}
+  .features{padding:5rem 1.2rem}
+  .features-grid{grid-template-columns:1fr;gap:1rem}
+  .feature-card{padding:1.5rem}
+  .weather-cards-demo{grid-template-columns:1fr;gap:.5rem}
+  .pie-wrap{flex-direction:column;align-items:flex-start}
+  .export-btns{flex-direction:column}
+  .export-btn{width:100%;text-align:center}
+  .ml-section{padding:4rem 1.2rem}
+  .ml-card{padding:1.3rem}
+  .ml-header{flex-direction:column}
+  .ml-badges-row{display:none}
+  .ml-form{grid-template-columns:1fr;gap:1rem}
+  .conf-breakdown{grid-template-columns:1fr 1fr}
+  .model-stats-bar{gap:.8rem}
+  .stat-chip .sv{font-size:1.1rem}
+  .importance-title::after{display:none}
+  .explore{padding:5rem 1.2rem}
+  .explore-filters{gap:.4rem}
+  .filter-btn{font-size:.68rem;padding:.38rem .8rem}
+  .states-grid{grid-template-columns:1fr}
+  .state-modal{padding:1.5rem;margin:.5rem}
+  .modal-facts{grid-template-columns:1fr}
+  .modal-title{font-size:1.7rem}
+  footer{padding:1.8rem 1.2rem;flex-direction:column;align-items:flex-start;gap:.5rem}
+  .scroll-hint{display:none}
+}
